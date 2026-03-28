@@ -13,7 +13,9 @@
   },
   "permissions": [
     "sidePanel",
+    "scripting",
     "tabs",
+    "activeTab",
     "storage"
   ],
   "host_permissions": [
