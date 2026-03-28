@@ -1,4 +1,16 @@
-import { makeStyles } from '@fluentui/react-components'
+import { makeStyles, tokens } from '@fluentui/react-components'
+
+
+const waveKeyframes = {
+  "0%, 75%, 100%": {
+    height: "0px",
+    backgroundColor: tokens.colorBrandForegroundInvertedHover,
+  },
+  "25%": {
+    height: "20px",
+    backgroundColor: tokens.colorBrandForegroundInvertedPressed,
+  },
+};
 
 const useStyles = makeStyles({
   root: {
@@ -38,6 +50,58 @@ const useStyles = makeStyles({
     borderRadius: '4px',
     padding: '8px',
     background: 'rgba(255, 255, 255, 0.1)',
+  },
+  chatBody: {
+    maxHeight: '50vh',
+    overflowY: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '8px',
+  },
+  messageItemUser: {
+    textAlign: 'right',
+    marginBottom: '4px',
+  },
+  messageItemAssistant: {
+    textAlign: 'left',
+    marginBottom: '4px',
+  },
+  messageBubble: {
+    display: 'inline-block',
+    padding: '8px',
+    borderRadius: '4px',
+    color: '#fff',
+  },
+  loadingRow: {
+    display: 'flex',
+    gap: '8px',
+    alignItems: 'baseline',
+  },
+  loadingIndicatorContainer: {
+    textAlign: 'left',
+    marginBottom: '4px',
+    display: 'flex',
+    gap: '4px',
+    height: '90px',
+    alignItems: 'flex-end',
+  },
+  thinkingText: {
+    paddingLeft: '8px',
+  },
+  bar: {
+    width: "30px",
+    height: "0px",
+    backgroundColor: tokens.colorBrandBackground,
+    animationName: waveKeyframes, 
+    animationDuration: "1s",
+    animationIterationCount: "infinite",
+    animationTimingFunction: "ease-in-out",
+  },
+  bar2: {
+    animationDelay: "0.30s",
+  },
+  bar3: {
+    animationDelay: "0.70s",
   },
 })
 
