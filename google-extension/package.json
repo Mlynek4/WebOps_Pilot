@@ -11,7 +11,8 @@
   "dependencies": {
     "@fluentui/react-components": "^9.49.0",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
