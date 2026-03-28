@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Moje Stabilne Rozszerzenie",
+  "name": "WAD",
   "version": "1.0.0",
   "action": {
     "default_popup": "index.html"
@@ -9,5 +9,22 @@
   "service_worker": "assets/background.js",
   "type": "module"
   },
-  "permissions": []
+  "permissions": [
+    "sidePanel",
+    "scripting",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["assets/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
