@@ -82,7 +82,10 @@ Unlike traditional copilots or RPA tools:
 Prototype with:
 - working Chrome extension  
 - backend agent loop  
-- real-time command execution on webpages  
+- real-time command execution on webpages
+
+Demo:
+- https://youtu.be/hrVUjODzKqI
 
 ---
 
